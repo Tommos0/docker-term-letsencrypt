@@ -1,0 +1,2 @@
+# min	hour	day	month	weekday	command
+* *	*	*	*	exec /certbot.sh
