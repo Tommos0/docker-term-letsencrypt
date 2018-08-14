@@ -33,3 +33,7 @@ docker run -it \
   -v`pwd`/letsencrypt:/etc/letsencrypt \
   docker-term-letsencrypt
 ```
+
+On first run a self-signed certificate is generated, which is overwritten when Certbot succeeds in getting a certificate from Let's Encrypt. This means that even if it fails everything will still function - but with warnings in the browser because of the self-signed certificate.
+
+By default Certbot will try to renew your certificate every night at `3 am` (but this can be changed by editing the `crontab`).
