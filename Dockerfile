@@ -10,6 +10,9 @@ RUN mkdir /acme
 RUN mkdir /cert
 
 COPY nginx.conf /nginx.conf
+RUN ln -s /dev/stdout /var/log/nginx/access.log
+RUN ln -s /dev/stderr /var/log/nginx/error.log
+
 COPY certbot.sh /certbot.sh
 RUN chmod a+x /certbot.sh
 

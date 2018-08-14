@@ -1,5 +1,4 @@
 #!/bin/sh
-export
 export > /etc/envvars
 trap "sv stop crond; sv stop nginx; exit" SIGTERM
 
@@ -15,4 +14,5 @@ if [ ! -f /cert/privkey.pem ]; then
 fi
 
 /sbin/runsvdir /etc/service &
+sh ./certbot.sh
 wait
