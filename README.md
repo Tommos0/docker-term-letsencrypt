@@ -5,7 +5,7 @@ This Docker container can be used as a reverse proxy between the internet and th
 It takes care of encryption and acquisition & automatic renewal of HTTPS certificates using Let's encrypt / Certbot. It should give you an `A` score at [SSL Labs](https://www.ssllabs.com/).
 
 ## How to use
-Configuration is done through the `.env` file:
+Configuration is done through environment variables, (see the `.env` file):
 ```
 # The domains to request the certificate for, seperated by a comma
 SSL_DOMAINS=mydomain.org,www.mydomain.org
