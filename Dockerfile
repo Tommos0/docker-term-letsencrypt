@@ -6,9 +6,6 @@ RUN mkdir /etc/service/nginx
 RUN mkdir /run/nginx
 RUN mkdir /acme
 
-#Remove when it is volume
-RUN mkdir /cert
-
 COPY nginx.conf /nginx.conf
 RUN ln -s /dev/stdout /var/log/nginx/access.log
 RUN ln -s /dev/stderr /var/log/nginx/error.log
@@ -23,12 +20,7 @@ RUN chmod a+x /etc/service/nginx/run
 COPY crond.sh /etc/service/crond/run
 RUN chmod a+x /etc/service/crond/run
 
-
 COPY start.sh /start.sh
 RUN chmod a+x /start.sh
 
-
-
-
 ENTRYPOINT /start.sh
-
