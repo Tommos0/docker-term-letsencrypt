@@ -1,0 +1,4 @@
+cert
+letsencrypt
+dhparam.pem
+*.swp
