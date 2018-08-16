@@ -24,7 +24,8 @@ So you should keep the generated certificates and config by mounting persistent 
 Make sure to bind ports `80` and `443` of course.
 
 E.g. to run standalone:
-- `docker build . -t docker-term-letsencrypt`
+- `docker pull rsdnlesc/docker-term-letsencrypt`
+- or `docker build . -t rsdnlesc/docker-term-letsencrypt`
 
 ```
 docker run -it \
@@ -33,7 +34,7 @@ docker run -it \
   -p443:443 \
   -v`pwd`/cert:/cert \
   -v`pwd`/letsencrypt:/etc/letsencrypt \
-  docker-term-letsencrypt
+  rsdnlesc/docker-term-letsencrypt
 ```
 
 On first run a self-signed certificate is generated, which is overwritten when Certbot succeeds in getting a certificate from Let's Encrypt. This means that even if it fails everything will still function - but with warnings in the browser because of the self-signed certificate.
