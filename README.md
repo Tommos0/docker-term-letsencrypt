@@ -3,6 +3,7 @@ docker / nginx / Let's encrypt SSL termination/proxy.
 
 [![Docker Build](https://img.shields.io/docker/build/rsdnlesc/docker-term-letsencrypt.svg)](https://hub.docker.com/r/rsdnlesc/docker-term-letsencrypt/)
 
+
 This Docker container can be used as a reverse proxy between the internet and the rest of your application.
 It takes care of encryption and acquisition & automatic renewal of HTTPS certificates using Let's encrypt / Certbot. It should give you an `A` score at [SSL Labs](https://www.ssllabs.com/).
 
