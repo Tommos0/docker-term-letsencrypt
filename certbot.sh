@@ -9,7 +9,7 @@ DIR_NAME=`ls /etc/letsencrypt/live | head -n 1`
 
 install_cert()
 {
-	DIR_NAME=`ls /etc/letsencrypt/live | head -n 1`
+	DIR_NAME=`ls /etc/letsencrypt/live | grep -v README | head -n 1`
 	cp -L /etc/letsencrypt/live/${DIR_NAME}/*.pem /cert
 	sv hup nginx
 }
